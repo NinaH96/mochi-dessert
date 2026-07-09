@@ -3,10 +3,8 @@
 import { motion } from "framer-motion";
 import FloatingDoodle from "./ui/FloatingDoodle";
 import {
-  DoodleStrawberry,
   DoodleStar,
   DoodleBow,
-  DoodleFlower,
 } from "./doodles/Doodles";
 
 export default function Hero() {
@@ -15,31 +13,6 @@ export default function Hero() {
       id="top"
       className="relative pt-32 pb-20 md:pt-44 md:pb-28 px-5 md:px-8 overflow-hidden"
     >
-      {/* ambient floating doodles, scattered but not distracting */}
-      <FloatingDoodle className="absolute left-[4%] top-[22%] w-10 md:w-14" duration={7}>
-        <DoodleStrawberry className="w-full h-full" />
-      </FloatingDoodle>
-      <FloatingDoodle className="absolute right-[6%] top-[14%] w-8 md:w-12" duration={5.5} delay={0.6}>
-        <DoodleStar className="w-full h-full" />
-      </FloatingDoodle>
-      <FloatingDoodle className="absolute right-[3%] bottom-[10%] w-10 md:w-14" duration={8} delay={1}>
-        <DoodleFlower className="w-full h-full" />
-      </FloatingDoodle>
-      <FloatingDoodle
-        className="absolute right-3 top-24 z-0 w-20 opacity-95 drop-shadow-md sm:right-8 sm:w-24 md:right-[7%] md:top-28 md:w-28 lg:w-36"
-        duration={7.5}
-        delay={0.2}
-        yOffset={8}
-        rotate={3}
-      >
-        <img
-          src="/images/mochi-dog-baker.png"
-          alt=""
-          aria-hidden="true"
-          className="w-full h-auto"
-        />
-      </FloatingDoodle>
-
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 md:gap-8 items-center">
         {/* Left: copy */}
         <div className="relative z-10 text-center md:text-left">
@@ -95,57 +68,46 @@ export default function Hero() {
           </motion.div>
         </div>
 
-        {/* Right: the "cake box" reveal — our signature moment */}
+        {/* Right: a compact Mochi dog decoration cluster */}
         <motion.div
           initial={{ opacity: 0, scale: 0.94 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
-          className="relative mx-auto max-w-md md:max-w-none"
+          className="relative z-0 mx-auto h-60 w-full max-w-sm sm:h-72 md:h-[420px] md:max-w-md lg:max-w-lg"
         >
-          <div className="relative aspect-[4/5] rounded-4xl bg-blush-light shadow-soft overflow-hidden">
-            {/* Replace with a real photo of a finished cake at /public/images/hero-cake.jpg */}
+          <FloatingDoodle
+            className="absolute right-6 top-0 w-32 opacity-95 drop-shadow-md sm:right-8 sm:w-40 md:right-12 md:top-8 md:w-52 lg:w-60"
+            duration={7.5}
+            delay={0.2}
+            yOffset={8}
+            rotate={3}
+          >
             <img
-              src="/images/hero-cake.jpg"
-              alt="A custom Mochi Dessert cake, freshly finished"
-              className="absolute inset-0 w-full h-full object-cover"
-            />
-
-            {/* box lid + ribbon that "unties" on load, like opening a cake box */}
-            <motion.div
-              initial={{ y: 0 }}
-              animate={{ y: "-100%" }}
-              transition={{ duration: 1, delay: 0.5, ease: [0.65, 0, 0.35, 1] }}
-              className="absolute inset-0 bg-cream"
-            />
-            <svg
-              viewBox="0 0 400 500"
-              className="absolute inset-0 w-full h-full pointer-events-none"
+              src="/images/mochi-dog-baker.png"
+              alt=""
               aria-hidden="true"
-            >
-              <motion.path
-                d="M0 250 H400"
-                stroke="#F8D8DF"
-                strokeWidth="26"
-                initial={{ pathLength: 1, opacity: 1 }}
-                animate={{ opacity: 0 }}
-                transition={{ delay: 1.1, duration: 0.5 }}
-              />
-              <motion.path
-                d="M200 0 V500"
-                stroke="#F8D8DF"
-                strokeWidth="26"
-                initial={{ pathLength: 1, opacity: 1 }}
-                animate={{ opacity: 0 }}
-                transition={{ delay: 1.2, duration: 0.5 }}
-              />
-            </svg>
-          </div>
+              className="w-full h-auto"
+            />
+          </FloatingDoodle>
 
           <FloatingDoodle
-            className="absolute -bottom-6 -left-6 w-16 md:w-20 drop-shadow-md"
-            duration={6}
+            className="absolute left-14 top-36 w-14 drop-shadow-md sm:left-16 sm:top-44 sm:w-16 md:left-20 md:top-72 md:w-20"
+            duration={6.5}
+            delay={0.5}
+            yOffset={6}
+            rotate={2}
           >
             <DoodleBow className="w-full h-full" />
+          </FloatingDoodle>
+
+          <FloatingDoodle
+            className="absolute right-4 top-6 w-8 opacity-80 md:right-8 md:top-12 md:w-10"
+            duration={5.5}
+            delay={0.8}
+            yOffset={5}
+            rotate={2}
+          >
+            <DoodleStar className="w-full h-full" />
           </FloatingDoodle>
         </motion.div>
       </div>
