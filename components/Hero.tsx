@@ -25,6 +25,34 @@ export default function Hero() {
       <FloatingDoodle className="absolute right-[3%] bottom-[10%] w-10 md:w-14" duration={8} delay={1}>
         <DoodleFlower className="w-full h-full" />
       </FloatingDoodle>
+      <FloatingDoodle
+        className="absolute right-3 top-24 z-0 w-20 opacity-95 drop-shadow-md sm:right-8 sm:w-24 md:right-[7%] md:top-28 md:w-28 lg:w-36"
+        duration={7.5}
+        delay={0.2}
+        yOffset={8}
+        rotate={3}
+      >
+        <img
+          src="/images/mochi-dog-baker.png"
+          alt=""
+          aria-hidden="true"
+          className="w-full h-auto"
+        />
+      </FloatingDoodle>
+      <FloatingDoodle
+        className="hidden md:block absolute left-[43%] top-28 z-0 w-20 opacity-90 drop-shadow-sm lg:w-24"
+        duration={8.5}
+        delay={0.8}
+        yOffset={7}
+        rotate={2}
+      >
+        <img
+          src="/images/mochi-dog-sitting.png"
+          alt=""
+          aria-hidden="true"
+          className="w-full h-auto"
+        />
+      </FloatingDoodle>
 
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 md:gap-8 items-center">
         {/* Left: copy */}
