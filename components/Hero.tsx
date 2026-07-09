@@ -39,20 +39,6 @@ export default function Hero() {
           className="w-full h-auto"
         />
       </FloatingDoodle>
-      <FloatingDoodle
-        className="hidden md:block absolute left-[43%] top-28 z-0 w-20 opacity-90 drop-shadow-sm lg:w-24"
-        duration={8.5}
-        delay={0.8}
-        yOffset={7}
-        rotate={2}
-      >
-        <img
-          src="/images/mochi-dog-sitting.png"
-          alt=""
-          aria-hidden="true"
-          className="w-full h-auto"
-        />
-      </FloatingDoodle>
 
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 md:gap-8 items-center">
         {/* Left: copy */}
