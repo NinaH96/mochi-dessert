@@ -2,18 +2,15 @@
 
 import { motion } from "framer-motion";
 import FloatingDoodle from "./ui/FloatingDoodle";
-import {
-  DoodleStar,
-  DoodleBow,
-} from "./doodles/Doodles";
+import { DoodleStar } from "./doodles/Doodles";
 
 export default function Hero() {
   return (
     <section
       id="top"
-      className="relative pt-32 pb-20 md:pt-44 md:pb-28 px-5 md:px-8 overflow-hidden"
+      className="relative overflow-hidden px-5 pb-16 pt-36 md:px-8 md:pb-24 md:pt-44"
     >
-      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 md:gap-8 items-center">
+      <div className="mx-auto grid max-w-6xl items-center gap-10 md:grid-cols-[0.98fr_1.02fr] md:gap-8">
         {/* Left: copy */}
         <div className="relative z-10 text-center md:text-left">
           <motion.p
@@ -29,79 +26,72 @@ export default function Hero() {
             initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1 }}
-            className="font-display text-4xl sm:text-5xl md:text-6xl font-semibold leading-[1.08] text-ink"
+            className="leading-[1.02]"
           >
-            Baked with love,
-            <br />
-            <span className="text-strawberry squiggle-underline">made just for you.</span>
+            <span className="brand-script block text-6xl text-strawberry sm:text-7xl md:text-8xl">
+              Mocchi
+            </span>
+            <span className="mt-2 block font-display text-3xl font-semibold text-ink sm:text-4xl md:text-5xl">
+              cakes for special days.
+            </span>
           </motion.h1>
 
           <motion.p
             initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.22 }}
-            className="mt-6 text-base md:text-lg text-ink/70 max-w-md mx-auto md:mx-0"
+            className="mx-auto mt-6 max-w-md text-base leading-relaxed text-ink/70 md:mx-0 md:text-lg"
           >
-            Custom cakes for birthdays, graduations, pets, and every small
-            reason to celebrate — designed with you, baked in small batches,
-            picked up with a bow on top.
+            Custom cakes, pet-friendly treats, and small-batch sweets from a
+            home studio in West Lafayette. Each order is kept like a tiny
+            celebration folder: thoughtful, personal, and made one at a time.
           </motion.p>
 
           <motion.div
             initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.34 }}
-            className="mt-9 flex flex-col sm:flex-row gap-4 justify-center md:justify-start"
+            className="mt-9 flex flex-col justify-center gap-4 sm:flex-row md:justify-start"
           >
             <a
               href="#contact"
-              className="rounded-full bg-strawberry text-cream font-body font-semibold px-7 py-3.5 shadow-button hover:brightness-105 hover:-translate-y-0.5 transition-all duration-300"
+              className="rounded-full bg-strawberry px-7 py-3.5 text-center font-body font-semibold text-cream shadow-button transition-all duration-300 hover:-translate-y-0.5 hover:brightness-105"
             >
               Order a Custom Cake
             </a>
             <a
               href="#gallery"
-              className="rounded-full border-2 border-cocoa/15 text-cocoa font-body font-semibold px-7 py-3.5 hover:border-cocoa/40 hover:-translate-y-0.5 transition-all duration-300"
+              className="rounded-full border-2 border-cocoa/15 bg-paper/70 px-7 py-3.5 text-center font-body font-semibold text-cocoa-deep transition-all duration-300 hover:-translate-y-0.5 hover:border-cocoa/35"
             >
-              See the Gallery
+              Open the Archive
             </a>
           </motion.div>
         </div>
 
-        {/* Right: a compact Mochi dog decoration cluster */}
+        {/* Right: a compact brand illustration cluster */}
         <motion.div
           initial={{ opacity: 0, scale: 0.94 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
-          className="relative z-0 mx-auto h-60 w-full max-w-sm sm:h-72 md:h-[420px] md:max-w-md lg:max-w-lg"
+          className="relative z-0 mx-auto h-72 w-full max-w-sm sm:h-80 md:h-[430px] md:max-w-md lg:max-w-lg"
         >
           <FloatingDoodle
-            className="absolute right-6 top-0 w-32 opacity-95 drop-shadow-md sm:right-8 sm:w-40 md:right-12 md:top-8 md:w-52 lg:w-60"
+            className="absolute left-1/2 top-0 w-64 -translate-x-1/2 opacity-95 drop-shadow-md sm:w-72 md:top-4 md:w-80 lg:w-[22rem]"
             duration={7.5}
             delay={0.2}
             yOffset={8}
             rotate={3}
           >
             <img
-              src="/images/mochi-dog-baker.png"
+              src="/images/brand/mochi-cake-dog-cutout.png"
               alt=""
               aria-hidden="true"
-              className="w-full h-auto"
+              className="h-auto w-full"
             />
           </FloatingDoodle>
 
           <FloatingDoodle
-            className="absolute left-14 top-36 w-14 drop-shadow-md sm:left-16 sm:top-44 sm:w-16 md:left-20 md:top-72 md:w-20"
-            duration={6.5}
-            delay={0.5}
-            yOffset={6}
-            rotate={2}
-          >
-            <DoodleBow className="w-full h-full" />
-          </FloatingDoodle>
-
-          <FloatingDoodle
-            className="absolute right-4 top-6 w-8 opacity-80 md:right-8 md:top-12 md:w-10"
+            className="absolute right-8 top-10 w-8 opacity-80 md:right-10 md:top-14 md:w-10"
             duration={5.5}
             delay={0.8}
             yOffset={5}

@@ -15,12 +15,11 @@ export default function About() {
           transition={{ duration: 0.7 }}
           className="relative"
         >
-          <div className="relative aspect-square max-w-sm mx-auto rounded-4xl overflow-hidden shadow-soft">
-            {/* Replace with a real photo of the founder baking */}
+          <div className="paper-panel relative aspect-square max-w-sm mx-auto rounded-4xl overflow-hidden border border-cocoa/10 shadow-soft">
             <img
-              src="/images/founder.jpg"
-              alt="The Mochi Dessert founder decorating a cake in her home kitchen"
-              className="w-full h-full object-cover"
+              src="/images/brand/mochi-logo-dog.png"
+              alt="Mochi Dessert dog mascot sticker"
+              className="w-full h-full object-cover mix-blend-multiply"
             />
           </div>
           <FloatingDoodle className="absolute -top-5 -right-3 w-14" duration={5}>

@@ -18,6 +18,12 @@ const config: Config = {
         "blush-light": "#FCEDF0",
         "matcha-light": "#E3EFE0",
         "cream-deep": "#FBF2E9",
+        "folder-pink": "#F7C7D5",
+        "folder-blue": "#B9DDF0",
+        "folder-green": "#BDD4C5",
+        "folder-cream": "#F6D8A8",
+        "paper": "#FFFCF7",
+        "cocoa-deep": "#4A2B24",
       },
       fontFamily: {
         display: ["var(--font-fredoka)", "system-ui", "sans-serif"],

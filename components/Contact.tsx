@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { Instagram, Mail, MapPin, MessageCircle } from "lucide-react";
 import FloatingDoodle from "./ui/FloatingDoodle";
-import { DoodleCandle, DoodleStrawberry } from "./doodles/Doodles";
+import { DoodleCandle } from "./doodles/Doodles";
 
 const contactLinks = [
   {
@@ -32,9 +32,6 @@ export default function Contact() {
       <div className="max-w-5xl mx-auto relative rounded-5xl bg-cocoa text-cream px-6 md:px-16 py-16 md:py-20 overflow-hidden">
         <FloatingDoodle className="absolute top-8 right-10 w-14 opacity-90" duration={6}>
           <DoodleCandle className="w-full h-full" />
-        </FloatingDoodle>
-        <FloatingDoodle className="absolute bottom-10 left-8 w-12 opacity-90" duration={7} delay={0.5}>
-          <DoodleStrawberry className="w-full h-full" />
         </FloatingDoodle>
 
         <motion.div
