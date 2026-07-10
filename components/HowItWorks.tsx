@@ -1,13 +1,13 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { processSteps } from "@/lib/data";
 import {
   DoodleRibbon,
   DoodleSmiley,
   DoodleStar,
   DoodleBow,
 } from "./doodles/Doodles";
+import { useLanguage } from "./LanguageProvider";
 
 const doodleMap: Record<string, React.ComponentType<{ className?: string }>> = {
   ribbon: DoodleRibbon,
@@ -17,6 +17,8 @@ const doodleMap: Record<string, React.ComponentType<{ className?: string }>> = {
 };
 
 export default function HowItWorks() {
+  const { t } = useLanguage();
+
   return (
     <section
       id="how-it-works"
@@ -24,14 +26,14 @@ export default function HowItWorks() {
     >
       <div className="max-w-6xl mx-auto">
         <div className="max-w-xl mb-14 md:mb-20 mx-auto text-center md:text-left md:mx-0">
-          <p className="eyebrow mb-3">How ordering works</p>
+          <p className="eyebrow mb-3">{t.process.eyebrow}</p>
           <h2 className="font-display text-3xl md:text-4xl font-semibold text-ink">
-            From "I have an idea" to cake in hand
+            {t.process.title}
           </h2>
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6">
-          {processSteps.map((step, i) => {
+          {t.process.steps.map((step, i) => {
             const Doodle = doodleMap[step.doodle];
             return (
               <motion.div
@@ -50,7 +52,7 @@ export default function HowItWorks() {
                 </h3>
                 <p className="text-sm text-ink/70 leading-relaxed">{step.copy}</p>
 
-                {i < processSteps.length - 1 && (
+                {i < t.process.steps.length - 1 && (
                   <div className="hidden lg:block absolute top-8 -right-3 text-cocoa/25 text-2xl">
                     →
                   </div>

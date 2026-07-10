@@ -2,18 +2,20 @@
 
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import { useLanguage } from "./LanguageProvider";
 
 const links = [
-  { href: "#about", label: "Story", color: "bg-folder-cream" },
-  { href: "#gallery", label: "Gallery", color: "bg-folder-blue" },
-  { href: "#how-it-works", label: "Order Notes", color: "bg-folder-green" },
-  { href: "#reviews", label: "Reviews", color: "bg-blush-light" },
-  { href: "#faq", label: "FAQ", color: "bg-cream-deep" },
-];
+  { href: "#about", key: "story", color: "bg-folder-cream" },
+  { href: "#gallery", key: "gallery", color: "bg-folder-blue" },
+  { href: "#how-it-works", key: "orderNotes", color: "bg-folder-green" },
+  { href: "#reviews", key: "reviews", color: "bg-blush-light" },
+  { href: "#faq", key: "faq", color: "bg-cream-deep" },
+] as const;
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const { t, toggleLanguage } = useLanguage();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12);
@@ -26,8 +28,10 @@ export default function Navbar() {
       initial={{ y: -40, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-cream/95 backdrop-blur-md shadow-[0_4px_20px_-8px_rgba(110,74,61,0.15)]" : "bg-cream/70 backdrop-blur-sm"
+      className={`fixed top-0 inset-x-0 z-50 border-b border-cocoa/10 transition-all duration-300 ${
+        scrolled
+          ? "bg-[#F7ECE6]/95 backdrop-blur-md shadow-[0_4px_20px_-8px_rgba(110,74,61,0.18)]"
+          : "bg-[#F7ECE6]/90 backdrop-blur-sm"
       }`}
     >
       <nav className="max-w-6xl mx-auto flex items-center justify-between px-5 py-3 md:px-8">
@@ -49,20 +53,27 @@ export default function Navbar() {
               href={l.href}
               className={`folder-tab ${l.color} px-5 py-3 font-body text-sm font-semibold text-cocoa-deep transition-transform duration-300 hover:-translate-y-1`}
             >
-              {l.label}
+              {t.nav[l.key]}
             </a>
           ))}
+          <button
+            type="button"
+            onClick={toggleLanguage}
+            className="folder-tab bg-paper px-4 py-3 font-body text-sm font-semibold text-cocoa-deep transition-transform duration-300 hover:-translate-y-1"
+          >
+            {t.nav.toggle}
+          </button>
           <a
             href="#contact"
             className="folder-tab bg-strawberry px-5 py-3 font-body text-sm font-semibold text-cream transition-transform duration-300 hover:-translate-y-1"
           >
-            Order
+            {t.nav.order}
           </a>
         </div>
 
         <button
           onClick={() => setOpen((v) => !v)}
-          aria-label="Toggle menu"
+          aria-label={t.nav.menu}
           aria-expanded={open}
           className="flex flex-col gap-1.5 p-2 lg:hidden"
         >
@@ -77,7 +88,7 @@ export default function Navbar() {
           initial={{ height: 0, opacity: 0 }}
           animate={{ height: "auto", opacity: 1 }}
           exit={{ height: 0, opacity: 0 }}
-          className="lg:hidden bg-cream/95 border-t border-cocoa/10 px-5 pb-6 pt-4 grid grid-cols-2 gap-2"
+          className="lg:hidden bg-[#F7ECE6]/98 border-t border-cocoa/10 px-5 pb-6 pt-4 grid grid-cols-2 gap-2"
         >
           {links.map((l) => (
             <a
@@ -86,15 +97,22 @@ export default function Navbar() {
               onClick={() => setOpen(false)}
               className={`folder-tab ${l.color} px-4 py-3 font-body text-sm font-semibold text-cocoa-deep`}
             >
-              {l.label}
+              {t.nav[l.key]}
             </a>
           ))}
+          <button
+            type="button"
+            onClick={toggleLanguage}
+            className="folder-tab bg-paper px-4 py-3 text-left font-body text-sm font-semibold text-cocoa-deep"
+          >
+            {t.nav.toggle}
+          </button>
           <a
             href="#contact"
             onClick={() => setOpen(false)}
             className="folder-tab bg-strawberry px-4 py-3 text-center font-body text-sm font-semibold text-cream"
           >
-            Order
+            {t.nav.order}
           </a>
         </motion.div>
       )}

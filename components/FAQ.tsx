@@ -3,23 +3,24 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Plus } from "lucide-react";
-import { faqs } from "@/lib/data";
+import { useLanguage } from "./LanguageProvider";
 
 export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
+  const { t } = useLanguage();
 
   return (
     <section id="faq" className="relative px-5 md:px-8 py-20 md:py-28 bg-blush-light/50">
       <div className="max-w-3xl mx-auto">
         <div className="mb-12 md:mb-16 text-center md:text-left">
-          <p className="eyebrow mb-3">Good to know</p>
+          <p className="eyebrow mb-3">{t.faq.eyebrow}</p>
           <h2 className="font-display text-3xl md:text-4xl font-semibold text-ink">
-            Frequently asked questions
+            {t.faq.title}
           </h2>
         </div>
 
         <div className="space-y-3">
-          {faqs.map((item, i) => {
+          {t.faq.items.map((item, i) => {
             const isOpen = openIndex === i;
             return (
               <div

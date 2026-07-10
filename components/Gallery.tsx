@@ -2,29 +2,29 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { cakeFolders } from "@/lib/data";
+import { useLanguage } from "./LanguageProvider";
 
 export default function Gallery() {
-  const [activeId, setActiveId] = useState(cakeFolders[0].id);
-  const activeFolder = cakeFolders.find((folder) => folder.id === activeId) ?? cakeFolders[0];
+  const { t } = useLanguage();
+  const [activeId, setActiveId] = useState<string>(t.gallery.folders[0].id);
+  const activeFolder = t.gallery.folders.find((folder) => folder.id === activeId) ?? t.gallery.folders[0];
 
   return (
     <section id="gallery" className="relative px-5 py-20 md:px-8 md:py-28">
       <div className="mx-auto max-w-6xl">
         <div className="mb-14 max-w-2xl">
-          <p className="eyebrow mb-3">Gallery</p>
+          <p className="eyebrow mb-3">{t.gallery.eyebrow}</p>
           <h2 className="font-display text-3xl font-semibold text-ink md:text-4xl">
-            Open a folder, peek inside
+            {t.gallery.title}
           </h2>
           <p className="mt-4 text-ink/70">
-            Cakes are grouped like a little desktop archive. Pick a folder to
-            see example directions, then send your own references when ordering.
+            {t.gallery.body}
           </p>
         </div>
 
         <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
           <div className="grid gap-x-4 gap-y-12 sm:grid-cols-2">
-            {cakeFolders.map((folder, i) => {
+            {t.gallery.folders.map((folder, i) => {
               const isActive = folder.id === activeId;
               return (
                 <motion.button
@@ -35,19 +35,12 @@ export default function Gallery() {
                   viewport={{ once: true, amount: 0.35 }}
                   transition={{ duration: 0.5, delay: i * 0.06 }}
                   onClick={() => setActiveId(folder.id)}
-                  className={`folder-card ${folder.color} group min-h-[205px] px-5 pb-5 pt-7 text-left transition-all duration-300 ${
+                  className={`folder-card ${folder.color} group min-h-[178px] px-5 pb-5 pt-7 text-left transition-all duration-300 ${
                     isActive ? "-translate-y-2 shadow-soft" : "hover:-translate-y-1"
                   }`}
                   aria-pressed={isActive}
                 >
-                  <div className="relative h-28">
-                    <img
-                      src={folder.cover}
-                      alt=""
-                      aria-hidden="true"
-                      className="absolute -right-2 -top-10 h-36 w-36 rotate-3 object-cover mix-blend-multiply transition-transform duration-500 group-hover:rotate-0"
-                    />
-                  </div>
+                  <div className="h-20" />
                   <p className="text-xs font-semibold uppercase tracking-[0.14em] text-cocoa/55">
                     {folder.note}
                   </p>

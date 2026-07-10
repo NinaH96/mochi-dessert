@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Instagram, Mail, MapPin, MessageCircle } from "lucide-react";
 import FloatingDoodle from "./ui/FloatingDoodle";
 import { DoodleCandle } from "./doodles/Doodles";
+import { useLanguage } from "./LanguageProvider";
 
 const contactLinks = [
   {
@@ -27,6 +28,8 @@ const contactLinks = [
 ];
 
 export default function Contact() {
+  const { t } = useLanguage();
+
   return (
     <section id="contact" className="relative px-5 md:px-8 py-20 md:py-28">
       <div className="max-w-5xl mx-auto relative rounded-5xl bg-cocoa text-cream px-6 md:px-16 py-16 md:py-20 overflow-hidden">
@@ -41,14 +44,12 @@ export default function Contact() {
           transition={{ duration: 0.7 }}
           className="relative z-10 max-w-2xl"
         >
-          <p className="eyebrow mb-3 !text-blush">Let's make something sweet</p>
+          <p className="eyebrow mb-3 !text-blush">{t.contact.eyebrow}</p>
           <h2 className="font-display text-3xl md:text-5xl font-semibold leading-tight mb-6">
-            Tell us what you're celebrating.
+            {t.contact.title}
           </h2>
           <p className="text-cream/75 mb-10 max-w-lg">
-            Send a message with your date, flavor ideas, and any inspiration
-            photos. We'll get back to you within a day or two to talk through
-            the details.
+            {t.contact.body}
           </p>
 
           <div className="grid sm:grid-cols-3 gap-5 mb-10">
@@ -73,14 +74,14 @@ export default function Contact() {
 
           <div className="flex items-center gap-3 text-cream/80 mb-10">
             <MapPin size={20} className="text-blush shrink-0" />
-            <p>West Lafayette, Indiana — pickup by appointment</p>
+            <p>{t.contact.location}</p>
           </div>
 
           <a
             href="mailto:hello@mochidessert.com"
             className="inline-block rounded-full bg-strawberry text-cream font-body font-semibold px-8 py-4 shadow-button hover:brightness-105 hover:-translate-y-0.5 transition-all duration-300"
           >
-            Start Your Order
+            {t.contact.cta}
           </a>
         </motion.div>
       </div>

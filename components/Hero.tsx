@@ -2,8 +2,11 @@
 
 import { motion } from "framer-motion";
 import FloatingDoodle from "./ui/FloatingDoodle";
+import { useLanguage } from "./LanguageProvider";
 
 export default function Hero() {
+  const { t } = useLanguage();
+
   return (
     <section
       id="top"
@@ -18,7 +21,7 @@ export default function Hero() {
             transition={{ duration: 0.6 }}
             className="eyebrow mb-4"
           >
-            West Lafayette, Indiana
+            {t.hero.location}
           </motion.p>
 
           <motion.h1
@@ -28,10 +31,10 @@ export default function Hero() {
             className="relative mx-auto max-w-[28rem] leading-[1.02] md:mx-0 md:max-w-none"
           >
             <span className="brand-giordano block text-6xl text-strawberry sm:text-7xl md:text-8xl lg:text-9xl">
-              Mocchi Dessert
+              {t.hero.title}
             </span>
             <span className="brand-subtitle -mt-1 block text-4xl text-ink sm:text-5xl md:text-6xl">
-              cakes for special days.
+              {t.hero.subtitle}
             </span>
           </motion.h1>
 
@@ -51,9 +54,7 @@ export default function Hero() {
             transition={{ duration: 0.7, delay: 0.22 }}
             className="mx-auto mt-6 max-w-md text-base leading-relaxed text-ink/70 md:mx-0 md:text-lg"
           >
-            Custom cakes, pet-friendly treats, and small-batch sweets from a
-            home studio in West Lafayette. Each order is kept like a tiny
-            celebration folder: thoughtful, personal, and made one at a time.
+            {t.hero.body}
           </motion.p>
 
           <motion.div
@@ -66,13 +67,13 @@ export default function Hero() {
               href="#contact"
               className="rounded-full bg-strawberry px-7 py-3.5 text-center font-body font-semibold text-cream shadow-button transition-all duration-300 hover:-translate-y-0.5 hover:brightness-105"
             >
-              Order a Custom Cake
+              {t.hero.order}
             </a>
             <a
               href="#gallery"
               className="rounded-full border-2 border-cocoa/15 bg-paper/70 px-7 py-3.5 text-center font-body font-semibold text-cocoa-deep transition-all duration-300 hover:-translate-y-0.5 hover:border-cocoa/35"
             >
-              Open the Gallery
+              {t.hero.gallery}
             </a>
           </motion.div>
         </div>

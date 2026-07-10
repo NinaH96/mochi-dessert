@@ -1,22 +1,24 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { reviews } from "@/lib/data";
 import { DoodleFlower } from "./doodles/Doodles";
+import { useLanguage } from "./LanguageProvider";
 
 export default function Reviews() {
+  const { t } = useLanguage();
+
   return (
     <section id="reviews" className="relative px-5 md:px-8 py-20 md:py-28">
       <div className="max-w-6xl mx-auto">
         <div className="max-w-xl mb-14 md:mb-16">
-          <p className="eyebrow mb-3">Kind words</p>
+          <p className="eyebrow mb-3">{t.reviews.eyebrow}</p>
           <h2 className="font-display text-3xl md:text-4xl font-semibold text-ink">
-            Notes from happy tables (and one very happy dog)
+            {t.reviews.title}
           </h2>
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-6 pt-4">
-          {reviews.map((r, i) => (
+          {t.reviews.items.map((r, i) => (
             <motion.div
               key={r.name}
               initial={{ opacity: 0, y: 24 }}

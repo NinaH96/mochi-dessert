@@ -7,19 +7,22 @@ import Reviews from "@/components/Reviews";
 import FAQ from "@/components/FAQ";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import LanguageProvider from "@/components/LanguageProvider";
 
 export default function Home() {
   return (
-    <main>
-      <Navbar />
-      <Hero />
-      <About />
-      <Gallery />
-      <HowItWorks />
-      <Reviews />
-      <FAQ />
-      <Contact />
-      <Footer />
-    </main>
+    <LanguageProvider>
+      <main>
+        <Navbar />
+        <Hero />
+        <About />
+        <Gallery />
+        <HowItWorks />
+        <Reviews />
+        <FAQ />
+        <Contact />
+        <Footer />
+      </main>
+    </LanguageProvider>
   );
 }

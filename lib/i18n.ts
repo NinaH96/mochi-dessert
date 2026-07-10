@@ -1,0 +1,298 @@
+export type Language = "en" | "zh";
+
+export const translations = {
+  en: {
+    nav: {
+      story: "Story",
+      gallery: "Gallery",
+      orderNotes: "Order Notes",
+      reviews: "Reviews",
+      faq: "FAQ",
+      order: "Order",
+      toggle: "中文",
+      menu: "Toggle menu",
+    },
+    hero: {
+      location: "West Lafayette, Indiana",
+      title: "Mocchi Dessert",
+      subtitle: "cakes for special days.",
+      body: "Custom cakes, pet-friendly treats, and small-batch sweets from a home studio in West Lafayette. Each order is kept like a tiny celebration folder: thoughtful, personal, and made one at a time.",
+      order: "Order a Custom Cake",
+      gallery: "Open the Gallery",
+    },
+    about: {
+      eyebrow: "Our story",
+      title: "It started with a love for celebration",
+      paragraphs: [
+        "Mochi Dessert grew from years of learning, traveling, and baking. During high school in Europe, our founder studied dessert-making more seriously, falling in love with the patience, detail, and quiet joy behind a beautiful cake.",
+        "In college, that passion became something shared. Friends started asking for birthday cakes, surprise cakes, and little desserts for the moments they wanted to remember. With every order, their encouragement turned a hobby into something more intentional.",
+        "Now, every cake is made to help people celebrate their special occasions with something personal, thoughtful, and handmade in West Lafayette. It is still one cake at a time, still made with care, and always designed around the person receiving it.",
+      ],
+    },
+    gallery: {
+      eyebrow: "Gallery",
+      title: "Open a folder, peek inside",
+      body: "Cakes are grouped like a little desktop archive. Pick a folder to see example directions, then send your own references when ordering.",
+      folders: [
+        {
+          id: "four-inch",
+          title: "4-inch Cakes",
+          note: "Everyday little cakes",
+          color: "bg-blush-light",
+          items: [
+            { title: "Just because", image: "/images/brand/mochi-logo-dog.png", meta: "1-2 people" },
+            { title: "Tiny fruit cake", image: "/images/brand/mochi-cake-dog.png", meta: "everyday treat" },
+            { title: "Mini message", image: "/images/brand/mochi-fork-dog.png", meta: "small note" },
+          ],
+        },
+        {
+          id: "six-inch",
+          title: "6-inch Cakes",
+          note: "Personal celebrations",
+          color: "bg-folder-pink",
+          items: [
+            { title: "Strawberry cream", image: "/images/brand/mochi-cake-dog.png", meta: "soft cream / fruit" },
+            { title: "Matcha berry", image: "/images/brand/mochi-logo-dog.png", meta: "matcha / strawberry" },
+            { title: "Ribbon bento", image: "/images/brand/mochi-fork-dog.png", meta: "custom message" },
+          ],
+        },
+        {
+          id: "eight-inch",
+          title: "8-inch Cakes",
+          note: "Shared table cakes",
+          color: "bg-folder-blue",
+          items: [
+            { title: "Fruit garden", image: "/images/brand/mochi-fork-dog.png", meta: "larger group" },
+            { title: "Black sesame", image: "/images/brand/mochi-cake-dog.png", meta: "nutty / light" },
+            { title: "Birthday archive", image: "/images/brand/mochi-logo-dog.png", meta: "custom piping" },
+          ],
+        },
+        {
+          id: "dog-cakes",
+          title: "Dog Cakes",
+          note: "Pet birthdays",
+          color: "bg-folder-green",
+          items: [
+            { title: "Puppy birthday", image: "/images/brand/mochi-sleep-dog.png", meta: "pet-friendly" },
+            { title: "Tiny paw cake", image: "/images/brand/mochi-logo-dog.png", meta: "gentle ingredients" },
+            { title: "Best friend set", image: "/images/brand/mochi-fork-dog.png", meta: "human + pet" },
+          ],
+        },
+        {
+          id: "mini-treats",
+          title: "Dessert",
+          note: "Small batch sweets",
+          color: "bg-folder-cream",
+          items: [
+            { title: "Bento cakes", image: "/images/brand/mochi-logo-dog.png", meta: "small box" },
+            { title: "Cupcake notes", image: "/images/brand/mochi-cake-dog.png", meta: "party set" },
+            { title: "Cookie favors", image: "/images/brand/mochi-sleep-dog.png", meta: "giftable" },
+          ],
+        },
+        {
+          id: "blog",
+          title: "Blog",
+          note: "Recipes & tips",
+          color: "bg-matcha-light",
+          items: [
+            { title: "Recipe journal", image: "/images/brand/mochi-cake-dog.png", meta: "tests & notes" },
+            { title: "Cake care", image: "/images/brand/mochi-fork-dog.png", meta: "pickup / storage" },
+            { title: "Flavor notes", image: "/images/brand/mochi-logo-dog.png", meta: "pairings & ideas" },
+          ],
+        },
+      ],
+    },
+    process: {
+      eyebrow: "How ordering works",
+      title: 'From "I have an idea" to cake in hand',
+      steps: [
+        { title: "Send inspiration", copy: "Text or DM us a photo, a Pinterest board, or just a vibe: flavor, colors, whatever you've got.", doodle: "ribbon" },
+        { title: "Discuss details", copy: "We'll chat about size, flavor, and timeline, then lock in your pickup date together.", doodle: "smiley" },
+        { title: "Freshly baked", copy: "Your cake is made from scratch in small batches, a day or two before you need it.", doodle: "star" },
+        { title: "Pick up & celebrate", copy: "Swing by West Lafayette, grab your cake box, and go make the day a little sweeter.", doodle: "bow" },
+      ],
+    },
+    reviews: {
+      eyebrow: "Kind words",
+      title: "Notes from happy tables (and one very happy dog)",
+      items: [
+        { name: "Priya S.", tag: "Purdue senior", quote: "I sent one blurry inspo photo and got back a cake that looked better than the original. My roommates devoured it in one sitting.", rotate: -2 },
+        { name: "Jordan & Max", tag: "Pet birthday", quote: "Max finally got his own birthday cake and it didn't upset his stomach at all. He has requested it again for next year.", rotate: 1.5 },
+        { name: "Grace L.", tag: "Graduation order", quote: "The tiny fondant cap on top had our exact tassel color. Small detail, but it made my mom cry a little.", rotate: -1 },
+        { name: "Marcus T.", tag: "Anniversary cake", quote: "Ordered a last-minute anniversary cake and it still felt custom, not rushed. Will be a repeat customer.", rotate: 2 },
+      ],
+    },
+    faq: {
+      eyebrow: "Good to know",
+      title: "Frequently asked questions",
+      items: [
+        { q: "How far in advance should I order?", a: "For most custom cakes, 1-2 weeks notice works best, especially around finals and graduation season. Smaller treats and rush orders may be possible; just ask." },
+        { q: "Do you deliver, or is it pickup only?", a: "Pickup is based in West Lafayette, Indiana. Local delivery may be available for an added fee depending on the order and your location." },
+        { q: "Can you make pet-safe cakes?", a: "Yes. Pet cakes use dog-friendly ingredients and skip anything toxic to animals, like chocolate, xylitol, or grapes." },
+        { q: "What flavors do you offer?", a: "Classics like vanilla, chocolate, and strawberry, plus options like matcha, black sesame, ube, and mango." },
+      ],
+    },
+    contact: {
+      eyebrow: "Let's make something sweet",
+      title: "Tell us what you're celebrating.",
+      body: "Send a message with your date, flavor ideas, and any inspiration photos. We'll get back to you within a day or two to talk through the details.",
+      location: "West Lafayette, Indiana - pickup by appointment",
+      cta: "Start Your Order",
+    },
+    footer: {
+      body: "Custom cakes and small-batch sweets in West Lafayette, Indiana.",
+      story: "Our Story",
+      gallery: "Gallery",
+      faq: "FAQ",
+      contact: "Contact",
+      copyright: "Mochi Dessert, West Lafayette, Indiana. Made with love, one small batch at a time.",
+    },
+  },
+  zh: {
+    nav: {
+      story: "故事",
+      gallery: "相册",
+      orderNotes: "订购流程",
+      reviews: "评价",
+      faq: "FAQ",
+      order: "订购",
+      toggle: "EN",
+      menu: "打开菜单",
+    },
+    hero: {
+      location: "印第安纳州 West Lafayette",
+      title: "Mocchi Dessert",
+      subtitle: "为特别日子做的小蛋糕",
+      body: "来自 West Lafayette 家庭工作室的定制蛋糕、宠物友好蛋糕和小批量甜点。每一份订单都像一个小小的庆祝文件夹：细心、私人、一次只认真做好一个。",
+      order: "定制蛋糕",
+      gallery: "查看相册",
+    },
+    about: {
+      eyebrow: "我们的故事",
+      title: "从喜欢庆祝开始",
+      paragraphs: [
+        "Mocchi Dessert 来自很多年学习、旅行和烘焙的积累。高中时期在欧洲学习时，主理人开始更认真地进修甜品，被蛋糕背后的耐心、细节和安静的快乐吸引。",
+        "到了大学，这份喜欢变成了和朋友们一起分享的事情。朋友们过生日、准备惊喜、想纪念某个小瞬间时，会来请我做蛋糕。每一次支持，都慢慢把兴趣变成了更认真想经营的手艺。",
+        "现在，每一个蛋糕都是为了帮大家庆祝自己的 special occasion。它可以是生日、毕业、宠物生日，也可以只是想被好好记住的一天。依然是一单一单慢慢做，带着心意，也围绕收到蛋糕的人来设计。",
+      ],
+    },
+    gallery: {
+      eyebrow: "相册",
+      title: "打开一个 folder 看看",
+      body: "蛋糕和内容会像文件夹一样分类。可以先点进一个 folder 看方向、尺寸和参考，再把自己的灵感发给我们一起讨论。",
+      folders: [
+        {
+          id: "four-inch",
+          title: "4寸蛋糕",
+          note: "日常小蛋糕",
+          color: "bg-blush-light",
+          items: [
+            { title: "Just because", image: "/images/brand/mochi-logo-dog.png", meta: "1-2 人" },
+            { title: "水果小蛋糕", image: "/images/brand/mochi-cake-dog.png", meta: "日常想吃" },
+            { title: "迷你祝福语", image: "/images/brand/mochi-fork-dog.png", meta: "小字牌" },
+          ],
+        },
+        {
+          id: "six-inch",
+          title: "6寸蛋糕",
+          note: "生日和庆祝",
+          color: "bg-folder-pink",
+          items: [
+            { title: "草莓奶油", image: "/images/brand/mochi-cake-dog.png", meta: "清爽水果" },
+            { title: "抹茶莓果", image: "/images/brand/mochi-logo-dog.png", meta: "抹茶 / 草莓" },
+            { title: "Ribbon bento", image: "/images/brand/mochi-fork-dog.png", meta: "定制文字" },
+          ],
+        },
+        {
+          id: "eight-inch",
+          title: "8寸蛋糕",
+          note: "多人分享",
+          color: "bg-folder-blue",
+          items: [
+            { title: "水果花园", image: "/images/brand/mochi-fork-dog.png", meta: "适合聚会" },
+            { title: "黑芝麻", image: "/images/brand/mochi-cake-dog.png", meta: "坚果香" },
+            { title: "生日档案", image: "/images/brand/mochi-logo-dog.png", meta: "定制裱花" },
+          ],
+        },
+        {
+          id: "dog-cakes",
+          title: "狗狗蛋糕",
+          note: "宠物生日",
+          color: "bg-folder-green",
+          items: [
+            { title: "狗狗生日", image: "/images/brand/mochi-sleep-dog.png", meta: "宠物友好" },
+            { title: "小爪蛋糕", image: "/images/brand/mochi-logo-dog.png", meta: "温和食材" },
+            { title: "Best friend set", image: "/images/brand/mochi-fork-dog.png", meta: "人宠一起" },
+          ],
+        },
+        {
+          id: "mini-treats",
+          title: "甜点",
+          note: "小批量甜品",
+          color: "bg-folder-cream",
+          items: [
+            { title: "Bento cakes", image: "/images/brand/mochi-logo-dog.png", meta: "小盒蛋糕" },
+            { title: "Cupcake notes", image: "/images/brand/mochi-cake-dog.png", meta: "派对套组" },
+            { title: "Cookie favors", image: "/images/brand/mochi-sleep-dog.png", meta: "适合送礼" },
+          ],
+        },
+        {
+          id: "blog",
+          title: "Blog",
+          note: "配方和干货",
+          color: "bg-matcha-light",
+          items: [
+            { title: "配方笔记", image: "/images/brand/mochi-cake-dog.png", meta: "试做记录" },
+            { title: "蛋糕保存", image: "/images/brand/mochi-fork-dog.png", meta: "取货 / 保存" },
+            { title: "口味灵感", image: "/images/brand/mochi-logo-dog.png", meta: "搭配想法" },
+          ],
+        },
+      ],
+    },
+    process: {
+      eyebrow: "订购流程",
+      title: "从一个想法到拿到蛋糕",
+      steps: [
+        { title: "发送灵感", copy: "可以发照片、Pinterest、颜色、口味，或者只是一个大概 vibe。", doodle: "ribbon" },
+        { title: "确认细节", copy: "我们会一起确认尺寸、口味、设计方向和取货时间。", doodle: "smiley" },
+        { title: "新鲜制作", copy: "蛋糕会小批量现做，通常在需要前一两天完成。", doodle: "star" },
+        { title: "取货庆祝", copy: "到 West Lafayette 取走蛋糕，然后好好庆祝这一天。", doodle: "bow" },
+      ],
+    },
+    reviews: {
+      eyebrow: "大家的话",
+      title: "来自甜甜餐桌的反馈",
+      items: [
+        { name: "Priya S.", tag: "Purdue senior", quote: "我只发了一张很糊的参考图，最后蛋糕比原图还可爱。室友们一下就吃完了。", rotate: -2 },
+        { name: "Jordan & Max", tag: "宠物生日", quote: "Max 终于拥有了自己的生日蛋糕，而且吃完肠胃也很舒服。明年还要订。", rotate: 1.5 },
+        { name: "Grace L.", tag: "毕业蛋糕", quote: "小小的毕业帽连流苏颜色都做对了。细节很小，但我妈妈看到有点感动。", rotate: -1 },
+        { name: "Marcus T.", tag: "纪念日蛋糕", quote: "临时订的纪念日蛋糕，还是很有定制感，一点都不敷衍。会再来。", rotate: 2 },
+      ],
+    },
+    faq: {
+      eyebrow: "常见问题",
+      title: "订购前可以先看看",
+      items: [
+        { q: "需要提前多久订？", a: "大部分定制蛋糕建议提前 1-2 周，毕业季和 finals 前后最好更早一点。小甜点或急单可以先来问问。" },
+        { q: "可以配送吗？", a: "目前主要是 West Lafayette 取货。附近配送可以根据距离和订单情况再确认。" },
+        { q: "可以做宠物友好蛋糕吗？", a: "可以。狗狗蛋糕会使用宠物友好的食材，并避开巧克力、木糖醇、葡萄等不适合宠物的东西。" },
+        { q: "有什么口味？", a: "有香草、巧克力、草莓等经典口味，也可以做抹茶、黑芝麻、芋泥、芒果等方向。" },
+      ],
+    },
+    contact: {
+      eyebrow: "一起做点甜的",
+      title: "告诉我们你想庆祝什么。",
+      body: "发来日期、口味想法和参考图就可以。我们会在一两天内回复，一起确认细节。",
+      location: "West Lafayette, Indiana - 预约取货",
+      cta: "开始订购",
+    },
+    footer: {
+      body: "West Lafayette 的定制蛋糕和小批量甜点。",
+      story: "我们的故事",
+      gallery: "相册",
+      faq: "FAQ",
+      contact: "联系",
+      copyright: "Mochi Dessert, West Lafayette, Indiana. 小批量手作，每一份都认真完成。",
+    },
+  },
+} as const;

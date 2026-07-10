@@ -31,6 +31,18 @@ export const featuredCakes = [
 
 export const cakeFolders = [
   {
+    id: "four-inch",
+    title: "4-inch Cakes",
+    note: "Everyday little cakes",
+    color: "bg-blush-light",
+    cover: "/images/brand/mochi-logo-dog.png",
+    items: [
+      { title: "Just because", image: "/images/brand/mochi-logo-dog.png", meta: "1-2 people" },
+      { title: "Tiny fruit cake", image: "/images/brand/mochi-cake-dog.png", meta: "everyday treat" },
+      { title: "Mini message", image: "/images/brand/mochi-fork-dog.png", meta: "small note" },
+    ],
+  },
+  {
     id: "six-inch",
     title: "6-inch Cakes",
     note: "Personal celebrations",
@@ -76,6 +88,18 @@ export const cakeFolders = [
       { title: "Bento cakes", image: "/images/brand/mochi-logo-dog.png", meta: "small box" },
       { title: "Cupcake notes", image: "/images/brand/mochi-cake-dog.png", meta: "party set" },
       { title: "Cookie favors", image: "/images/brand/mochi-sleep-dog.png", meta: "giftable" },
+    ],
+  },
+  {
+    id: "blog",
+    title: "Blog",
+    note: "Recipes & tips",
+    color: "bg-matcha-light",
+    cover: "/images/brand/mochi-sleep-dog.png",
+    items: [
+      { title: "Recipe journal", image: "/images/brand/mochi-cake-dog.png", meta: "tests & notes" },
+      { title: "Cake care", image: "/images/brand/mochi-fork-dog.png", meta: "pickup / storage" },
+      { title: "Flavor notes", image: "/images/brand/mochi-logo-dog.png", meta: "pairings & ideas" },
     ],
   },
 ];
