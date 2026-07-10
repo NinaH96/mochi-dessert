@@ -9,8 +9,8 @@ const contactLinks = [
   {
     icon: Instagram,
     label: "Instagram",
-    value: "@mochidessert",
-    href: "https://instagram.com/mochidessert",
+    value: "@mocchi.dessert",
+    href: "https://www.instagram.com/mocchi.dessert/?hl=en",
   },
   {
     icon: MessageCircle,

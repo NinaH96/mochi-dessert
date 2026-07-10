@@ -38,7 +38,7 @@ export default function Navbar() {
             alt="Mochi Dessert home"
             className="h-10 w-16 object-contain drop-shadow-sm transition-transform duration-300 group-hover:-rotate-3 md:h-12 md:w-20"
           />
-          <span className="font-display text-xl md:text-2xl font-semibold text-cocoa-deep tracking-tight">
+          <span className="brand-subtitle text-2xl text-cocoa-deep md:text-3xl">
             Mochi Dessert
           </span>
         </a>

@@ -2,15 +2,14 @@
 
 import { motion } from "framer-motion";
 import FloatingDoodle from "./ui/FloatingDoodle";
-import { DoodleStar } from "./doodles/Doodles";
 
 export default function Hero() {
   return (
     <section
       id="top"
-      className="relative overflow-hidden px-5 pb-16 pt-36 md:px-8 md:pb-24 md:pt-44"
+      className="relative overflow-hidden px-5 pb-16 pt-32 md:px-8 md:pb-24 md:pt-44"
     >
-      <div className="mx-auto grid max-w-6xl items-center gap-10 md:grid-cols-[0.98fr_1.02fr] md:gap-8">
+      <div className="mx-auto grid max-w-6xl items-center gap-6 md:grid-cols-[1fr_0.86fr] md:gap-0">
         {/* Left: copy */}
         <div className="relative z-10 text-center md:text-left">
           <motion.p
@@ -26,14 +25,23 @@ export default function Hero() {
             initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1 }}
-            className="leading-[1.02]"
+            className="relative mx-auto max-w-[25rem] leading-[1.02] md:mx-0 md:max-w-none"
           >
-            <span className="brand-script block text-6xl text-strawberry sm:text-7xl md:text-8xl">
+            <span className="brand-script block text-7xl text-strawberry sm:text-8xl md:text-9xl">
               Mocchi
             </span>
-            <span className="mt-2 block font-display text-3xl font-semibold text-ink sm:text-4xl md:text-5xl">
+            <span className="brand-subtitle -mt-1 block text-4xl text-ink sm:text-5xl md:text-6xl">
               cakes for special days.
             </span>
+            <motion.img
+              src="/images/brand/mochi-cake-dog-cutout.png"
+              alt=""
+              aria-hidden="true"
+              initial={{ opacity: 0, scale: 0.92, rotate: 2 }}
+              animate={{ opacity: 1, scale: 1, rotate: 0 }}
+              transition={{ duration: 0.8, delay: 0.18, ease: [0.22, 1, 0.36, 1] }}
+              className="pointer-events-none absolute -right-14 top-10 z-[-1] w-36 opacity-90 drop-shadow-md sm:-right-20 sm:top-4 sm:w-44 md:hidden"
+            />
           </motion.h1>
 
           <motion.p
@@ -68,15 +76,15 @@ export default function Hero() {
           </motion.div>
         </div>
 
-        {/* Right: a compact brand illustration cluster */}
+        {/* Right: desktop brand illustration */}
         <motion.div
           initial={{ opacity: 0, scale: 0.94 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
-          className="relative z-0 mx-auto h-72 w-full max-w-sm sm:h-80 md:h-[430px] md:max-w-md lg:max-w-lg"
+          className="pointer-events-none relative z-0 hidden h-[430px] w-full max-w-md md:block md:-ml-28 lg:-ml-40 lg:max-w-lg"
         >
           <FloatingDoodle
-            className="absolute left-1/2 top-0 w-64 -translate-x-1/2 opacity-95 drop-shadow-md sm:w-72 md:top-4 md:w-80 lg:w-[22rem]"
+            className="absolute left-1/2 top-2 w-80 -translate-x-1/2 opacity-95 drop-shadow-md lg:w-[23rem]"
             duration={7.5}
             delay={0.2}
             yOffset={8}
@@ -88,16 +96,6 @@ export default function Hero() {
               aria-hidden="true"
               className="h-auto w-full"
             />
-          </FloatingDoodle>
-
-          <FloatingDoodle
-            className="absolute right-8 top-10 w-8 opacity-80 md:right-10 md:top-14 md:w-10"
-            duration={5.5}
-            delay={0.8}
-            yOffset={5}
-            rotate={2}
-          >
-            <DoodleStar className="w-full h-full" />
           </FloatingDoodle>
         </motion.div>
       </div>

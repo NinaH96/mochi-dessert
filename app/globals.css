@@ -2,6 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Midnight";
+  src: url("/fonts/Midnight.ttf") format("truetype");
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Midnight One";
+  src: url("/fonts/Midnight-One.ttf") format("truetype");
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --font-fredoka: "Fredoka", system-ui, sans-serif;
   --font-jakarta: "Plus Jakarta Sans", system-ui, sans-serif;
@@ -65,10 +81,16 @@ body {
 }
 
 .brand-script {
-  font-family: "Snell Roundhand", "Brush Script MT", var(--font-fredoka), cursive;
-  font-weight: 700;
+  font-family: "Midnight One", "Midnight", "Marker Felt", var(--font-fredoka), cursive;
+  font-weight: 400;
   letter-spacing: 0.01em;
-  text-shadow: 0 2px 0 rgba(74, 43, 36, 0.08);
+  text-shadow: 1px 2px 0 rgba(74, 43, 36, 0.08);
+}
+
+.brand-subtitle {
+  font-family: "Midnight", "Midnight One", "Marker Felt", var(--font-fredoka), cursive;
+  font-weight: 400;
+  letter-spacing: 0.015em;
 }
 
 .card-hover {
