@@ -34,6 +34,8 @@ export const translations = {
       eyebrow: "Gallery",
       title: "Open a folder, peek inside",
       body: "Cakes are grouped like a little desktop archive. Pick a folder to see example directions, then send your own references when ordering.",
+      showMore: "View all styles",
+      showLess: "Show less",
       folders: [
         {
           id: "four-inch",
@@ -43,14 +45,14 @@ export const translations = {
           color: "bg-blush-light",
           items: [
             { title: "Cat anniversary", image: "/images/cakes/4-inch/cat-anniversary.jpg", meta: "buttercream cats / paw prints" },
-            { title: "Lychee rose cream", image: "/images/cakes/4-inch/lychee-cream.jpg", meta: "lychee / soft cream" },
+            { title: "Lychee berry cream", image: "/images/cakes/4-inch/lychee-cream.jpg", meta: "lychee / berry cream" },
             { title: "Piglet birthday", image: "/images/cakes/4-inch/piglet-birthday.jpg", meta: "character piping" },
-            { title: "Strawberry box cake", image: "/images/cakes/4-inch/strawberry-box.jpg", meta: "fresh strawberry / cream" },
-            { title: "Blueberry mini", image: "/images/cakes/4-inch/blueberry-box.jpg", meta: "blueberry / berry cream" },
-            { title: "Happy year", image: "/images/cakes/4-inch/happy-year.jpg", meta: "custom message" },
+            { title: "Strawberry bento cake", image: "/images/cakes/4-inch/strawberry-box.jpg", meta: "fresh strawberry / cream" },
+            { title: "Blueberry bento cake", image: "/images/cakes/4-inch/blueberry-box.jpg", meta: "berry jam" },
+            { title: "Anniversary doodle cake", image: "/images/cakes/4-inch/happy-year.jpg", meta: "custom message" },
             { title: "Kitty paw heart", image: "/images/cakes/4-inch/kitty-paw-heart.jpg", meta: "cat face / paw details" },
-            { title: "Matcha name cake", image: "/images/cakes/4-inch/matcha-name.jpg", meta: "matcha / cream border" },
-            { title: "Birthday mini", image: "/images/cakes/4-inch/birthday-mini.jpg", meta: "fruit cream / candle" },
+            { title: "Matcha oval cake", image: "/images/cakes/4-inch/matcha-name.jpg", meta: "matcha / cream border" },
+            { title: "Jellycat mini cake", image: "/images/cakes/4-inch/birthday-mini.jpg", meta: "fresh fruit / cream" },
           ],
         },
         {
@@ -194,6 +196,8 @@ export const translations = {
       eyebrow: "相册",
       title: "打开一个 folder 看看",
       body: "蛋糕和内容会像文件夹一样分类。可以先点进一个 folder 看方向、尺寸和参考，再把自己的灵感发给我们一起讨论。",
+      showMore: "查看全部款式",
+      showLess: "收起款式",
       folders: [
         {
           id: "four-inch",
@@ -203,14 +207,14 @@ export const translations = {
           color: "bg-blush-light",
           items: [
             { title: "猫猫周年蛋糕", image: "/images/cakes/4-inch/cat-anniversary.jpg", meta: "奶油猫猫 / 爪印" },
-            { title: "荔枝玫瑰奶油", image: "/images/cakes/4-inch/lychee-cream.jpg", meta: "荔枝 / 清爽奶油" },
+            { title: "荔枝莓果奶油", image: "/images/cakes/4-inch/lychee-cream.jpg", meta: "荔枝 / 莓果奶油" },
             { title: "小猪生日蛋糕", image: "/images/cakes/4-inch/piglet-birthday.jpg", meta: "角色图案裱花" },
-            { title: "草莓盒子小蛋糕", image: "/images/cakes/4-inch/strawberry-box.jpg", meta: "新鲜草莓 / 奶油" },
-            { title: "蓝莓迷你蛋糕", image: "/images/cakes/4-inch/blueberry-box.jpg", meta: "蓝莓 / 莓果奶油" },
-            { title: "Happy year", image: "/images/cakes/4-inch/happy-year.jpg", meta: "定制文字" },
+            { title: "草莓 bento 蛋糕", image: "/images/cakes/4-inch/strawberry-box.jpg", meta: "新鲜草莓 / 奶油" },
+            { title: "蓝莓 bento 蛋糕", image: "/images/cakes/4-inch/blueberry-box.jpg", meta: "莓果果酱" },
+            { title: "周年 doodle 蛋糕", image: "/images/cakes/4-inch/happy-year.jpg", meta: "定制文字" },
             { title: "猫猫爪爪爱心", image: "/images/cakes/4-inch/kitty-paw-heart.jpg", meta: "猫脸 / 爪爪细节" },
-            { title: "抹茶名字蛋糕", image: "/images/cakes/4-inch/matcha-name.jpg", meta: "抹茶 / 奶油围边" },
-            { title: "生日迷你蛋糕", image: "/images/cakes/4-inch/birthday-mini.jpg", meta: "水果奶油 / 蜡烛" },
+            { title: "抹茶椭圆蛋糕", image: "/images/cakes/4-inch/matcha-name.jpg", meta: "抹茶 / 奶油围边" },
+            { title: "Jellycat 迷你蛋糕", image: "/images/cakes/4-inch/birthday-mini.jpg", meta: "新鲜水果 / 奶油" },
           ],
         },
         {

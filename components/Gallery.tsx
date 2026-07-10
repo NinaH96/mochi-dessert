@@ -4,10 +4,15 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { useLanguage } from "./LanguageProvider";
 
+const PREVIEW_ITEM_COUNT = 3;
+
 export default function Gallery() {
   const { t } = useLanguage();
   const [activeId, setActiveId] = useState<string>(t.gallery.folders[0].id);
+  const [isExpanded, setIsExpanded] = useState(false);
   const activeFolder = t.gallery.folders.find((folder) => folder.id === activeId) ?? t.gallery.folders[0];
+  const hasMoreItems = activeFolder.items.length > PREVIEW_ITEM_COUNT;
+  const visibleItems = isExpanded ? activeFolder.items : activeFolder.items.slice(0, PREVIEW_ITEM_COUNT);
 
   return (
     <section id="gallery" className="relative px-5 py-20 md:px-8 md:py-28">
@@ -34,7 +39,10 @@ export default function Gallery() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.35 }}
                   transition={{ duration: 0.5, delay: i * 0.06 }}
-                  onClick={() => setActiveId(folder.id)}
+                  onClick={() => {
+                    setActiveId(folder.id);
+                    setIsExpanded(false);
+                  }}
                   className={`folder-card ${folder.color} group min-h-[198px] px-5 pb-5 pt-7 text-left transition-all duration-300 ${
                     isActive ? "-translate-y-2 shadow-soft" : "hover:-translate-y-1"
                   }`}
@@ -67,7 +75,7 @@ export default function Gallery() {
             </div>
 
             <div className="mt-5 grid gap-4 sm:grid-cols-3">
-              {activeFolder.items.map((item) => (
+              {visibleItems.map((item) => (
                 <article
                   key={item.title}
                   className="rounded-xl border border-cocoa/10 bg-paper p-3 shadow-[0_8px_18px_-16px_rgba(74,43,36,0.5)]"
@@ -86,6 +94,18 @@ export default function Gallery() {
                 </article>
               ))}
             </div>
+
+            {hasMoreItems && (
+              <div className="mt-6 flex justify-center">
+                <button
+                  type="button"
+                  onClick={() => setIsExpanded((current) => !current)}
+                  className="rounded-full border border-cocoa/15 bg-paper px-5 py-3 text-sm font-semibold text-cocoa-deep shadow-[0_8px_18px_-18px_rgba(74,43,36,0.45)] transition-all hover:-translate-y-0.5 hover:border-strawberry/35 hover:text-strawberry"
+                >
+                  {isExpanded ? t.gallery.showLess : `${t.gallery.showMore} (${activeFolder.items.length})`}
+                </button>
+              </div>
+            )}
           </motion.div>
         </div>
       </div>
