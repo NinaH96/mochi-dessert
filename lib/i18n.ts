@@ -41,6 +41,7 @@ export const translations = {
           id: "four-inch",
           title: "4-inch Cakes",
           note: "Everyday little cakes",
+          price: "$35+",
           description: "Diameter 4 in (10 cm) · Serves 1-2",
           color: "bg-blush-light",
           items: [
@@ -53,12 +54,18 @@ export const translations = {
             { title: "Kitty paw heart", image: "/images/cakes/4-inch/kitty-paw-heart.jpg", meta: "cat face / paw details" },
             { title: "Matcha oval cake", image: "/images/cakes/4-inch/matcha-name.jpg", meta: "matcha / cream border" },
             { title: "Jellycat mini cake", image: "/images/cakes/4-inch/birthday-mini.jpg", meta: "fresh fruit / cream" },
+            { title: "Anniversary cake", image: "/images/cakes/4-inch/best-friends-cake.jpg", meta: "character doodle / hearts" },
+            { title: "Single flower cake", image: "/images/cakes/4-inch/single-flower-cake.jpg", meta: "cream flower / message card" },
+            { title: "Strawberry wafer cake", image: "/images/cakes/4-inch/strawberry-wafer.jpg", meta: "strawberry / wafer" },
+            { title: "Graduation drip cake", image: "/images/cakes/4-inch/graduation-drip.jpg", meta: "chocolate drip / strawberry" },
+            { title: "Red heart birthday", image: "/images/cakes/4-inch/red-heart-birthday.jpg", meta: "minimal piping / hearts" },
           ],
         },
         {
           id: "six-inch",
           title: "6-inch Cakes",
           note: "Personal celebrations",
+          price: "$55+",
           description: "Diameter 6 in (15 cm) · Serves 3-6",
           color: "bg-folder-pink",
           items: [
@@ -71,6 +78,7 @@ export const translations = {
           id: "eight-inch",
           title: "8-inch Cakes",
           note: "Shared table cakes",
+          price: "$75+",
           description: "Diameter 8 in (20 cm) · Serves 8-10",
           color: "bg-folder-blue",
           items: [
@@ -83,6 +91,7 @@ export const translations = {
           id: "dog-cakes",
           title: "Dog Cakes/Treats",
           note: "Pet birthdays",
+          price: "$45+",
           description: "Made with pet-safe ingredients\nFreshly baked for your best furriend",
           color: "bg-folder-green",
           items: [
@@ -203,6 +212,7 @@ export const translations = {
           id: "four-inch",
           title: "4寸蛋糕",
           note: "日常小蛋糕",
+          price: "$35+",
           description: "直径 4 英寸（10 cm）· 适合 1-2 人",
           color: "bg-blush-light",
           items: [
@@ -215,12 +225,18 @@ export const translations = {
             { title: "猫猫爪爪爱心", image: "/images/cakes/4-inch/kitty-paw-heart.jpg", meta: "猫脸 / 爪爪细节" },
             { title: "抹茶椭圆蛋糕", image: "/images/cakes/4-inch/matcha-name.jpg", meta: "抹茶 / 奶油围边" },
             { title: "Jellycat 迷你蛋糕", image: "/images/cakes/4-inch/birthday-mini.jpg", meta: "新鲜水果 / 奶油" },
+            { title: "纪念日蛋糕", image: "/images/cakes/4-inch/best-friends-cake.jpg", meta: "角色图案 / 爱心" },
+            { title: "小花奶油蛋糕", image: "/images/cakes/4-inch/single-flower-cake.jpg", meta: "奶油小花 / 祝福卡片" },
+            { title: "草莓威化蛋糕", image: "/images/cakes/4-inch/strawberry-wafer.jpg", meta: "草莓 / 威化" },
+            { title: "毕业淋面蛋糕", image: "/images/cakes/4-inch/graduation-drip.jpg", meta: "巧克力淋面 / 草莓" },
+            { title: "红心生日蛋糕", image: "/images/cakes/4-inch/red-heart-birthday.jpg", meta: "简约文字 / 爱心" },
           ],
         },
         {
           id: "six-inch",
           title: "6寸蛋糕",
           note: "生日和庆祝",
+          price: "$55+",
           description: "直径 6 英寸（15 cm）· 适合 3-6 人",
           color: "bg-folder-pink",
           items: [
@@ -233,6 +249,7 @@ export const translations = {
           id: "eight-inch",
           title: "8寸蛋糕",
           note: "多人分享",
+          price: "$75+",
           description: "直径 8 英寸（20 cm）· 适合 8-10 人",
           color: "bg-folder-blue",
           items: [
@@ -245,6 +262,7 @@ export const translations = {
           id: "dog-cakes",
           title: "狗狗蛋糕/零食",
           note: "宠物生日",
+          price: "$45+",
           description: "使用宠物友好食材\n为你最好的毛茸茸朋友新鲜制作",
           color: "bg-folder-green",
           items: [

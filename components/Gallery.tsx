@@ -48,6 +48,11 @@ export default function Gallery() {
                   }`}
                   aria-pressed={isActive}
                 >
+                  {"price" in folder && folder.price && (
+                    <span className="absolute right-4 top-4 rounded-full border border-cocoa/15 bg-paper/80 px-3 py-1 text-sm font-semibold text-cocoa-deep shadow-[0_6px_16px_-14px_rgba(74,43,36,0.45)] backdrop-blur-sm">
+                      {folder.price}
+                    </span>
+                  )}
                   <div className="h-10" />
                   <p className="text-xs font-semibold uppercase tracking-[0.14em] text-cocoa/55">
                     {folder.note}
