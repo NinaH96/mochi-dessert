@@ -1,6 +1,5 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import FeaturedCakes from "@/components/FeaturedCakes";
 import About from "@/components/About";
 import Gallery from "@/components/Gallery";
 import HowItWorks from "@/components/HowItWorks";
@@ -14,7 +13,6 @@ export default function Home() {
     <main>
       <Navbar />
       <Hero />
-      <FeaturedCakes />
       <About />
       <Gallery />
       <HowItWorks />

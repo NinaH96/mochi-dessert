@@ -1,8 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import FloatingDoodle from "./ui/FloatingDoodle";
-import { DoodleSmiley } from "./doodles/Doodles";
 
 export default function About() {
   return (
@@ -22,9 +20,6 @@ export default function About() {
               className="w-full h-full object-cover mix-blend-multiply"
             />
           </div>
-          <FloatingDoodle className="absolute -top-5 -right-3 w-14" duration={5}>
-            <DoodleSmiley className="w-full h-full" />
-          </FloatingDoodle>
         </motion.div>
 
         <motion.div

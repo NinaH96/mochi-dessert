@@ -25,24 +25,25 @@ export default function Hero() {
             initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1 }}
-            className="relative mx-auto max-w-[25rem] leading-[1.02] md:mx-0 md:max-w-none"
+            className="relative mx-auto max-w-[28rem] leading-[1.02] md:mx-0 md:max-w-none"
           >
-            <span className="brand-script block text-7xl text-strawberry sm:text-8xl md:text-9xl">
-              Mocchi
+            <span className="brand-giordano block text-6xl text-strawberry sm:text-7xl md:text-8xl lg:text-9xl">
+              Mocchi Dessert
             </span>
             <span className="brand-subtitle -mt-1 block text-4xl text-ink sm:text-5xl md:text-6xl">
               cakes for special days.
             </span>
-            <motion.img
-              src="/images/brand/mochi-cake-dog-cutout.png"
-              alt=""
-              aria-hidden="true"
-              initial={{ opacity: 0, scale: 0.92, rotate: 2 }}
-              animate={{ opacity: 1, scale: 1, rotate: 0 }}
-              transition={{ duration: 0.8, delay: 0.18, ease: [0.22, 1, 0.36, 1] }}
-              className="pointer-events-none absolute -right-14 top-10 z-[-1] w-36 opacity-90 drop-shadow-md sm:-right-20 sm:top-4 sm:w-44 md:hidden"
-            />
           </motion.h1>
+
+          <motion.img
+            src="/images/brand/mochi-cake-dog-cutout.png"
+            alt=""
+            aria-hidden="true"
+            initial={{ opacity: 0, scale: 0.92, rotate: 2 }}
+            animate={{ opacity: 1, scale: 1, rotate: 0 }}
+            transition={{ duration: 0.8, delay: 0.18, ease: [0.22, 1, 0.36, 1] }}
+            className="pointer-events-none mx-auto -mt-2 mb-2 w-36 opacity-95 drop-shadow-md sm:w-44 md:hidden"
+          />
 
           <motion.p
             initial={{ opacity: 0, y: 18 }}
@@ -71,7 +72,7 @@ export default function Hero() {
               href="#gallery"
               className="rounded-full border-2 border-cocoa/15 bg-paper/70 px-7 py-3.5 text-center font-body font-semibold text-cocoa-deep transition-all duration-300 hover:-translate-y-0.5 hover:border-cocoa/35"
             >
-              Open the Archive
+              Open the Gallery
             </a>
           </motion.div>
         </div>

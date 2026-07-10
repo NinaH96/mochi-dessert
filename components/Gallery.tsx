@@ -12,7 +12,7 @@ export default function Gallery() {
     <section id="gallery" className="relative px-5 py-20 md:px-8 md:py-28">
       <div className="mx-auto max-w-6xl">
         <div className="mb-14 max-w-2xl">
-          <p className="eyebrow mb-3">The archive</p>
+          <p className="eyebrow mb-3">Gallery</p>
           <h2 className="font-display text-3xl font-semibold text-ink md:text-4xl">
             Open a folder, peek inside
           </h2>

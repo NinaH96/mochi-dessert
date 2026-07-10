@@ -1,23 +1,20 @@
 export default function Footer() {
   return (
     <footer className="relative overflow-hidden border-t border-cocoa/10 px-5 pb-8 pt-12 md:px-8">
-      <div className="mx-auto flex max-w-6xl flex-col gap-8 md:flex-row md:items-start md:justify-between">
-        <div>
-          <div className="flex items-end gap-3">
-            <p className="brand-subtitle text-3xl text-cocoa-deep">Mocchi</p>
-            <img
-              src="/images/brand/mochi-sleep-dog-cutout.png"
-              alt=""
-              aria-hidden="true"
-              className="mb-1 w-28 drop-shadow-sm md:w-36"
-            />
-          </div>
-          <p className="mt-1 max-w-xs text-sm text-ink/50">
+      <div className="mx-auto flex max-w-6xl flex-col gap-8 md:flex-row md:items-end md:justify-between">
+        <div className="max-w-sm">
+          <img
+            src="/images/brand/mochi-sleep-dog-cutout.png"
+            alt=""
+            aria-hidden="true"
+            className="w-28 drop-shadow-sm md:w-32"
+          />
+          <p className="mt-1 text-sm text-ink/50">
             Custom cakes and small-batch sweets in West Lafayette, Indiana.
           </p>
         </div>
 
-        <nav className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-ink/60">
+        <nav className="flex flex-wrap items-end gap-x-6 gap-y-2 pb-3 text-sm text-ink/60">
           <a href="#cakes" className="hover:text-strawberry transition-colors">Cakes</a>
           <a href="#about" className="hover:text-strawberry transition-colors">Our Story</a>
           <a href="#gallery" className="hover:text-strawberry transition-colors">Gallery</a>

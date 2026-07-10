@@ -22,7 +22,7 @@ export const featuredCakes = [
   },
   {
     id: "mini-treats",
-    title: "Mini Treats",
+    title: "Dessert",
     blurb: "Bento cakes, cupcakes, cookies, and small-batch desserts for sharing.",
     image: "/images/brand/mochi-logo-dog.png",
     tint: "bg-folder-cream",
@@ -68,7 +68,7 @@ export const cakeFolders = [
   },
   {
     id: "mini-treats",
-    title: "Mini Treats",
+    title: "Dessert",
     note: "Small batch sweets",
     color: "bg-folder-cream",
     cover: "/images/brand/mochi-logo-dog.png",

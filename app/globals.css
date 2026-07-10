@@ -18,6 +18,14 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "Giordano Signature";
+  src: url("/fonts/Giordano-Signature.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --font-fredoka: "Fredoka", system-ui, sans-serif;
   --font-jakarta: "Plus Jakarta Sans", system-ui, sans-serif;
@@ -34,6 +42,21 @@ body {
     radial-gradient(circle at 20% 20%, rgba(248, 216, 223, 0.18) 0 1px, transparent 1px),
     radial-gradient(circle at 80% 30%, rgba(183, 211, 176, 0.16) 0 1px, transparent 1px);
   background-size: 34px 34px, 46px 46px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  body {
+    cursor: url("/cursors/paw-cursor.png") 12 6, auto;
+  }
+
+  a,
+  button,
+  [role="button"],
+  input,
+  textarea,
+  select {
+    cursor: url("/cursors/paw-cursor.png") 12 6, pointer;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -82,6 +105,13 @@ body {
 
 .brand-script {
   font-family: "Midnight One", "Midnight", "Marker Felt", var(--font-fredoka), cursive;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  text-shadow: 1px 2px 0 rgba(74, 43, 36, 0.08);
+}
+
+.brand-giordano {
+  font-family: "Giordano Signature", "Midnight One", "Midnight", "Marker Felt", cursive;
   font-weight: 400;
   letter-spacing: 0.01em;
   text-shadow: 1px 2px 0 rgba(74, 43, 36, 0.08);

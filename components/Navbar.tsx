@@ -4,9 +4,8 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
 const links = [
-  { href: "#cakes", label: "Cake Files", color: "bg-folder-pink" },
   { href: "#about", label: "Story", color: "bg-folder-cream" },
-  { href: "#gallery", label: "Archive", color: "bg-folder-blue" },
+  { href: "#gallery", label: "Gallery", color: "bg-folder-blue" },
   { href: "#how-it-works", label: "Order Notes", color: "bg-folder-green" },
   { href: "#reviews", label: "Reviews", color: "bg-blush-light" },
   { href: "#faq", label: "FAQ", color: "bg-cream-deep" },
@@ -31,19 +30,19 @@ export default function Navbar() {
         scrolled ? "bg-cream/95 backdrop-blur-md shadow-[0_4px_20px_-8px_rgba(110,74,61,0.15)]" : "bg-cream/70 backdrop-blur-sm"
       }`}
     >
-      <nav className="max-w-6xl mx-auto flex items-end justify-between px-5 md:px-8 pt-3 pb-0">
-        <a href="#top" className="group flex items-center gap-3 pb-3">
+      <nav className="max-w-6xl mx-auto flex items-center justify-between px-5 py-3 md:px-8">
+        <a href="#top" className="group flex -translate-y-0.5 items-center gap-3">
           <img
             src="/images/brand/mochi-dog-head-cutout.png"
             alt="Mochi Dessert home"
             className="h-10 w-16 object-contain drop-shadow-sm transition-transform duration-300 group-hover:-rotate-3 md:h-12 md:w-20"
           />
           <span className="brand-subtitle text-2xl text-cocoa-deep md:text-3xl">
-            Mochi Dessert
+            Mocchi Dessert
           </span>
         </a>
 
-        <div className="hidden lg:flex items-end gap-1">
+        <div className="hidden translate-y-3 items-end gap-1 lg:flex">
           {links.map((l) => (
             <a
               key={l.href}
@@ -65,7 +64,7 @@ export default function Navbar() {
           onClick={() => setOpen((v) => !v)}
           aria-label="Toggle menu"
           aria-expanded={open}
-          className="mb-3 flex flex-col gap-1.5 p-2 lg:hidden"
+          className="flex flex-col gap-1.5 p-2 lg:hidden"
         >
           <span className={`block h-0.5 w-6 bg-cocoa rounded-full transition-transform ${open ? "rotate-45 translate-y-2" : ""}`} />
           <span className={`block h-0.5 w-6 bg-cocoa rounded-full transition-opacity ${open ? "opacity-0" : ""}`} />
