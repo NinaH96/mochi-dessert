@@ -35,18 +35,21 @@ export default function Gallery() {
                   viewport={{ once: true, amount: 0.35 }}
                   transition={{ duration: 0.5, delay: i * 0.06 }}
                   onClick={() => setActiveId(folder.id)}
-                  className={`folder-card ${folder.color} group min-h-[178px] px-5 pb-5 pt-7 text-left transition-all duration-300 ${
+                  className={`folder-card ${folder.color} group min-h-[198px] px-5 pb-5 pt-7 text-left transition-all duration-300 ${
                     isActive ? "-translate-y-2 shadow-soft" : "hover:-translate-y-1"
                   }`}
                   aria-pressed={isActive}
                 >
-                  <div className="h-20" />
+                  <div className="h-10" />
                   <p className="text-xs font-semibold uppercase tracking-[0.14em] text-cocoa/55">
                     {folder.note}
                   </p>
                   <h3 className="mt-1 font-display text-2xl font-semibold text-cocoa-deep">
                     {folder.title}
                   </h3>
+                  <p className="mt-3 max-w-xs whitespace-pre-line text-sm leading-relaxed text-cocoa-deep/65">
+                    {folder.description}
+                  </p>
                 </motion.button>
               );
             })}
@@ -73,7 +76,7 @@ export default function Gallery() {
                     <img
                       src={item.image}
                       alt={item.title}
-                      className="h-full w-full object-cover mix-blend-multiply"
+                      className="h-full w-full object-cover"
                     />
                   </div>
                   <h4 className="mt-3 font-display text-lg font-semibold text-cocoa-deep">

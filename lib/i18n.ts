@@ -22,11 +22,12 @@ export const translations = {
     },
     about: {
       eyebrow: "Our story",
-      title: "It started with a love for celebration",
+      title: "Small cakes. Big moments",
       paragraphs: [
-        "Mochi Dessert grew from years of learning, traveling, and baking. During high school in Europe, our founder studied dessert-making more seriously, falling in love with the patience, detail, and quiet joy behind a beautiful cake.",
-        "In college, that passion became something shared. Friends started asking for birthday cakes, surprise cakes, and little desserts for the moments they wanted to remember. With every order, their encouragement turned a hobby into something more intentional.",
-        "Now, every cake is made to help people celebrate their special occasions with something personal, thoughtful, and handmade in West Lafayette. It is still one cake at a time, still made with care, and always designed around the person receiving it.",
+        "Mocchi Dessert started with one simple thing: making cakes for friends.",
+        "One birthday became another. Then came little celebrations, surprise gifts, graduation cakes, and puppy birthdays.",
+        "Today, every cake is still made one at a time — with real ingredients, thoughtful details, and lots of care.",
+        "Thanks for letting Mocchi be part of your celebrations. ♡",
       ],
     },
     gallery: {
@@ -38,17 +39,25 @@ export const translations = {
           id: "four-inch",
           title: "4-inch Cakes",
           note: "Everyday little cakes",
+          description: "Diameter 4 in (10 cm) · Serves 1-2",
           color: "bg-blush-light",
           items: [
-            { title: "Just because", image: "/images/brand/mochi-logo-dog.png", meta: "1-2 people" },
-            { title: "Tiny fruit cake", image: "/images/brand/mochi-cake-dog.png", meta: "everyday treat" },
-            { title: "Mini message", image: "/images/brand/mochi-fork-dog.png", meta: "small note" },
+            { title: "Cat anniversary", image: "/images/cakes/4-inch/cat-anniversary.jpg", meta: "buttercream cats / paw prints" },
+            { title: "Lychee rose cream", image: "/images/cakes/4-inch/lychee-cream.jpg", meta: "lychee / soft cream" },
+            { title: "Piglet birthday", image: "/images/cakes/4-inch/piglet-birthday.jpg", meta: "character piping" },
+            { title: "Strawberry box cake", image: "/images/cakes/4-inch/strawberry-box.jpg", meta: "fresh strawberry / cream" },
+            { title: "Blueberry mini", image: "/images/cakes/4-inch/blueberry-box.jpg", meta: "blueberry / berry cream" },
+            { title: "Happy year", image: "/images/cakes/4-inch/happy-year.jpg", meta: "custom message" },
+            { title: "Kitty paw heart", image: "/images/cakes/4-inch/kitty-paw-heart.jpg", meta: "cat face / paw details" },
+            { title: "Matcha name cake", image: "/images/cakes/4-inch/matcha-name.jpg", meta: "matcha / cream border" },
+            { title: "Birthday mini", image: "/images/cakes/4-inch/birthday-mini.jpg", meta: "fruit cream / candle" },
           ],
         },
         {
           id: "six-inch",
           title: "6-inch Cakes",
           note: "Personal celebrations",
+          description: "Diameter 6 in (15 cm) · Serves 3-6",
           color: "bg-folder-pink",
           items: [
             { title: "Strawberry cream", image: "/images/brand/mochi-cake-dog.png", meta: "soft cream / fruit" },
@@ -60,6 +69,7 @@ export const translations = {
           id: "eight-inch",
           title: "8-inch Cakes",
           note: "Shared table cakes",
+          description: "Diameter 8 in (20 cm) · Serves 8-10",
           color: "bg-folder-blue",
           items: [
             { title: "Fruit garden", image: "/images/brand/mochi-fork-dog.png", meta: "larger group" },
@@ -69,8 +79,9 @@ export const translations = {
         },
         {
           id: "dog-cakes",
-          title: "Dog Cakes",
+          title: "Dog Cakes/Treats",
           note: "Pet birthdays",
+          description: "Made with pet-safe ingredients\nFreshly baked for your best furriend",
           color: "bg-folder-green",
           items: [
             { title: "Puppy birthday", image: "/images/brand/mochi-sleep-dog.png", meta: "pet-friendly" },
@@ -82,6 +93,7 @@ export const translations = {
           id: "mini-treats",
           title: "Dessert",
           note: "Small batch sweets",
+          description: "Seasonal desserts\nLimited weekly menu",
           color: "bg-folder-cream",
           items: [
             { title: "Bento cakes", image: "/images/brand/mochi-logo-dog.png", meta: "small box" },
@@ -91,8 +103,9 @@ export const translations = {
         },
         {
           id: "blog",
-          title: "Blog",
-          note: "Recipes & tips",
+          title: "Journal",
+          note: "Kitchen notes",
+          description: "Behind the scenes\nRecipes, stories & updates",
           color: "bg-matcha-light",
           items: [
             { title: "Recipe journal", image: "/images/brand/mochi-cake-dog.png", meta: "tests & notes" },
@@ -169,11 +182,12 @@ export const translations = {
     },
     about: {
       eyebrow: "我们的故事",
-      title: "从喜欢庆祝开始",
+      title: "小小蛋糕，大大时刻",
       paragraphs: [
-        "Mocchi Dessert 来自很多年学习、旅行和烘焙的积累。高中时期在欧洲学习时，主理人开始更认真地进修甜品，被蛋糕背后的耐心、细节和安静的快乐吸引。",
-        "到了大学，这份喜欢变成了和朋友们一起分享的事情。朋友们过生日、准备惊喜、想纪念某个小瞬间时，会来请我做蛋糕。每一次支持，都慢慢把兴趣变成了更认真想经营的手艺。",
-        "现在，每一个蛋糕都是为了帮大家庆祝自己的 special occasion。它可以是生日、毕业、宠物生日，也可以只是想被好好记住的一天。依然是一单一单慢慢做，带着心意，也围绕收到蛋糕的人来设计。",
+        "Mocchi Dessert 最开始其实很简单：给朋友们做蛋糕。",
+        "一个生日之后，又有了下一个生日。后来还有小小的庆祝、惊喜礼物、毕业蛋糕和狗狗生日。",
+        "到现在，每一个蛋糕依然是一份一份慢慢做：用真实的食材、细心的细节，还有很多很多 care。",
+        "谢谢你让 Mocchi 参与到你的庆祝里。♡",
       ],
     },
     gallery: {
@@ -185,17 +199,25 @@ export const translations = {
           id: "four-inch",
           title: "4寸蛋糕",
           note: "日常小蛋糕",
+          description: "直径 4 英寸（10 cm）· 适合 1-2 人",
           color: "bg-blush-light",
           items: [
-            { title: "Just because", image: "/images/brand/mochi-logo-dog.png", meta: "1-2 人" },
-            { title: "水果小蛋糕", image: "/images/brand/mochi-cake-dog.png", meta: "日常想吃" },
-            { title: "迷你祝福语", image: "/images/brand/mochi-fork-dog.png", meta: "小字牌" },
+            { title: "猫猫周年蛋糕", image: "/images/cakes/4-inch/cat-anniversary.jpg", meta: "奶油猫猫 / 爪印" },
+            { title: "荔枝玫瑰奶油", image: "/images/cakes/4-inch/lychee-cream.jpg", meta: "荔枝 / 清爽奶油" },
+            { title: "小猪生日蛋糕", image: "/images/cakes/4-inch/piglet-birthday.jpg", meta: "角色图案裱花" },
+            { title: "草莓盒子小蛋糕", image: "/images/cakes/4-inch/strawberry-box.jpg", meta: "新鲜草莓 / 奶油" },
+            { title: "蓝莓迷你蛋糕", image: "/images/cakes/4-inch/blueberry-box.jpg", meta: "蓝莓 / 莓果奶油" },
+            { title: "Happy year", image: "/images/cakes/4-inch/happy-year.jpg", meta: "定制文字" },
+            { title: "猫猫爪爪爱心", image: "/images/cakes/4-inch/kitty-paw-heart.jpg", meta: "猫脸 / 爪爪细节" },
+            { title: "抹茶名字蛋糕", image: "/images/cakes/4-inch/matcha-name.jpg", meta: "抹茶 / 奶油围边" },
+            { title: "生日迷你蛋糕", image: "/images/cakes/4-inch/birthday-mini.jpg", meta: "水果奶油 / 蜡烛" },
           ],
         },
         {
           id: "six-inch",
           title: "6寸蛋糕",
           note: "生日和庆祝",
+          description: "直径 6 英寸（15 cm）· 适合 3-6 人",
           color: "bg-folder-pink",
           items: [
             { title: "草莓奶油", image: "/images/brand/mochi-cake-dog.png", meta: "清爽水果" },
@@ -207,6 +229,7 @@ export const translations = {
           id: "eight-inch",
           title: "8寸蛋糕",
           note: "多人分享",
+          description: "直径 8 英寸（20 cm）· 适合 8-10 人",
           color: "bg-folder-blue",
           items: [
             { title: "水果花园", image: "/images/brand/mochi-fork-dog.png", meta: "适合聚会" },
@@ -216,8 +239,9 @@ export const translations = {
         },
         {
           id: "dog-cakes",
-          title: "狗狗蛋糕",
+          title: "狗狗蛋糕/零食",
           note: "宠物生日",
+          description: "使用宠物友好食材\n为你最好的毛茸茸朋友新鲜制作",
           color: "bg-folder-green",
           items: [
             { title: "狗狗生日", image: "/images/brand/mochi-sleep-dog.png", meta: "宠物友好" },
@@ -229,6 +253,7 @@ export const translations = {
           id: "mini-treats",
           title: "甜点",
           note: "小批量甜品",
+          description: "季节限定甜点\n每周少量菜单",
           color: "bg-folder-cream",
           items: [
             { title: "Bento cakes", image: "/images/brand/mochi-logo-dog.png", meta: "小盒蛋糕" },
@@ -238,8 +263,9 @@ export const translations = {
         },
         {
           id: "blog",
-          title: "Blog",
-          note: "配方和干货",
+          title: "Journal",
+          note: "厨房笔记",
+          description: "幕后记录\n配方、故事和更新",
           color: "bg-matcha-light",
           items: [
             { title: "配方笔记", image: "/images/brand/mochi-cake-dog.png", meta: "试做记录" },

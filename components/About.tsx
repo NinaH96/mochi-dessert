@@ -49,7 +49,7 @@ export default function About() {
           transition={{ duration: 0.7 }}
           className="relative"
         >
-          <div className="paper-panel relative mx-auto aspect-[3/4] max-w-sm overflow-hidden rounded-4xl border border-cocoa/10 shadow-soft">
+          <div className="paper-panel relative mx-auto aspect-[4/3] max-w-[21rem] overflow-hidden rounded-4xl border border-cocoa/10 shadow-soft sm:max-w-[23rem] md:aspect-[3/4] md:max-w-sm">
             <AnimatePresence mode="wait">
               <motion.img
                 key={storyPhotos[activePhoto].src}

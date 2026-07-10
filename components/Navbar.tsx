@@ -17,6 +17,14 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
   const { t, toggleLanguage } = useLanguage();
 
+  const playClickSound = () => {
+    const audio = new Audio("/audio/click.mp3");
+    audio.volume = 0.45;
+    audio.play().catch(() => {
+      // Browsers may ignore audio if the click is interrupted by navigation.
+    });
+  };
+
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12);
     window.addEventListener("scroll", onScroll);
@@ -35,7 +43,11 @@ export default function Navbar() {
       }`}
     >
       <nav className="max-w-6xl mx-auto flex items-center justify-between px-5 py-3 md:px-8">
-        <a href="#top" className="group flex -translate-y-0.5 items-center gap-3">
+        <a
+          href="#top"
+          onClick={playClickSound}
+          className="group flex -translate-y-0.5 items-center gap-3"
+        >
           <img
             src="/images/brand/mochi-dog-head-cutout.png"
             alt="Mochi Dessert home"
