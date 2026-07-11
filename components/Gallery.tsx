@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { useLanguage } from "./LanguageProvider";
 
@@ -8,11 +8,29 @@ const PREVIEW_ITEM_COUNT = 3;
 
 export default function Gallery() {
   const { t } = useLanguage();
+  const detailsRef = useRef<HTMLDivElement | null>(null);
   const [activeId, setActiveId] = useState<string>(t.gallery.folders[0].id);
   const [isExpanded, setIsExpanded] = useState(false);
+  const [tappingId, setTappingId] = useState<string | null>(null);
   const activeFolder = t.gallery.folders.find((folder) => folder.id === activeId) ?? t.gallery.folders[0];
   const hasMoreItems = activeFolder.items.length > PREVIEW_ITEM_COUNT;
   const visibleItems = isExpanded ? activeFolder.items : activeFolder.items.slice(0, PREVIEW_ITEM_COUNT);
+
+  const handleFolderClick = (folderId: string) => {
+    setActiveId(folderId);
+    setIsExpanded(false);
+    setTappingId(folderId);
+
+    window.setTimeout(() => {
+      setTappingId((current) => (current === folderId ? null : current));
+    }, 320);
+
+    if (window.matchMedia("(max-width: 1023px)").matches) {
+      window.setTimeout(() => {
+        detailsRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+      }, 180);
+    }
+  };
 
   return (
     <section id="gallery" className="relative px-5 py-20 md:px-8 md:py-28">
@@ -39,13 +57,10 @@ export default function Gallery() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.35 }}
                   transition={{ duration: 0.5, delay: i * 0.06 }}
-                  onClick={() => {
-                    setActiveId(folder.id);
-                    setIsExpanded(false);
-                  }}
+                  onClick={() => handleFolderClick(folder.id)}
                   className={`folder-card ${folder.color} group min-h-[198px] px-5 pb-5 pt-7 text-left transition-all duration-300 ${
                     isActive ? "-translate-y-2 shadow-soft" : "hover:-translate-y-1"
-                  }`}
+                  } ${tappingId === folder.id ? "is-tapping" : ""}`}
                   aria-pressed={isActive}
                 >
                   {"price" in folder && folder.price && (
@@ -69,11 +84,12 @@ export default function Gallery() {
           </div>
 
           <motion.div
+            ref={detailsRef}
             key={activeFolder.id}
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.35 }}
-            className="paper-panel rounded-[1.5rem] border border-cocoa/10 p-4 shadow-card md:p-6"
+            className="paper-panel scroll-mt-28 rounded-[1.5rem] border border-cocoa/10 p-4 shadow-card md:p-6 lg:scroll-mt-32"
           >
             <div className={`folder-tab inline-block ${activeFolder.color} px-5 py-3 font-display text-xl font-semibold text-cocoa-deep`}>
               {activeFolder.title}
