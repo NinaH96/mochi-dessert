@@ -88,9 +88,12 @@ export const translations = {
           description: "Diameter 8 in (20 cm) · Serves 8-10",
           color: "bg-folder-blue",
           items: [
-            { title: "Fruit garden", image: "/images/brand/mochi-fork-dog.png", meta: "larger group" },
-            { title: "Black sesame", image: "/images/brand/mochi-cake-dog.png", meta: "nutty / light" },
-            { title: "Birthday archive", image: "/images/brand/mochi-logo-dog.png", meta: "custom piping" },
+            { title: "Fruit chocolate drip", image: "/images/cakes/8-inch/fruit-chocolate-drip.jpg", meta: "fresh fruit / chocolate drip" },
+            { title: "Construction birthday", image: "/images/cakes/8-inch/construction-dino-birthday.jpg", meta: "dinosaur / excavator doodles" },
+            { title: "Group photo drip cake", image: "/images/cakes/8-inch/band-birthday-drip.jpg", meta: "photo toppers / berries" },
+            { title: "Graduation photo cake", image: "/images/cakes/8-inch/graduation-photo-drip.jpg", meta: "chocolate drip / custom toppers" },
+            { title: "Cat photo birthday", image: "/images/cakes/8-inch/cat-photo-birthday.jpg", meta: "pet photo / candles" },
+            { title: "Minimal line birthday", image: "/images/cakes/8-inch/minimal-line-birthday.jpg", meta: "black line piping" },
           ],
         },
         {
@@ -265,9 +268,12 @@ export const translations = {
           description: "直径 8 英寸（20 cm）· 适合 8-10 人",
           color: "bg-folder-blue",
           items: [
-            { title: "水果花园", image: "/images/brand/mochi-fork-dog.png", meta: "适合聚会" },
-            { title: "黑芝麻", image: "/images/brand/mochi-cake-dog.png", meta: "坚果香" },
-            { title: "生日档案", image: "/images/brand/mochi-logo-dog.png", meta: "定制裱花" },
+            { title: "水果巧克力淋面蛋糕", image: "/images/cakes/8-inch/fruit-chocolate-drip.jpg", meta: "新鲜水果 / 巧克力淋面" },
+            { title: "工程车恐龙生日蛋糕", image: "/images/cakes/8-inch/construction-dino-birthday.jpg", meta: "恐龙 / 挖掘机手绘" },
+            { title: "合照巧克力淋面蛋糕", image: "/images/cakes/8-inch/band-birthday-drip.jpg", meta: "照片插牌 / 莓果装饰" },
+            { title: "毕业照片蛋糕", image: "/images/cakes/8-inch/graduation-photo-drip.jpg", meta: "巧克力淋面 / 定制插牌" },
+            { title: "猫咪照片生日蛋糕", image: "/images/cakes/8-inch/cat-photo-birthday.jpg", meta: "宠物照片 / 蜡烛" },
+            { title: "简约线条生日蛋糕", image: "/images/cakes/8-inch/minimal-line-birthday.jpg", meta: "黑色线条裱花" },
           ],
         },
         {
